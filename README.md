@@ -1,4 +1,4 @@
-Lock design
+# ElectroLock
+Electronic lock project for CS 530 class at SDSU
 
-Primary contributor: Joseph Lee
-
+Team: Joseph Lee, Bibi Sibi, Jose Martinez, Colin Sepkovic
