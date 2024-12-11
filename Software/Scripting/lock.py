@@ -32,6 +32,8 @@ def make_discoverable():
     subprocess.run(["bluetoothctl", "pairable", "on"], check=True)
     print("Raspberry Pi is now discoverable and pairable.")
 
+
+CHARACTERISTIC_UUID = "0000abcd-0000-1000-8000-00805f9b34fb"
 def start_bluetooth_server():
     """Set up the Bluetooth server and handle connections."""
     server_sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
@@ -44,6 +46,7 @@ def start_bluetooth_server():
     bluetooth.advertise_service(
         server_sock,
         "LockControlServer",
+        service_id=CHARACTERISTIC_UUID,
         service_classes=[bluetooth.SERIAL_PORT_CLASS],
         profiles=[bluetooth.SERIAL_PORT_PROFILE],
     )
