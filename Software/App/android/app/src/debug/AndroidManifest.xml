@@ -1,0 +1,34 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mycompany.raspui1241568">
+
+    <!-- Flutter needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    
+    <!-- Bluetooth Permissions -->
+    <!-- Permission to use Bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- Permission to manage Bluetooth devices (discover and pair) -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- Permission to access location (needed for Bluetooth scanning) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+    <!-- Permission for background location access (needed for Bluetooth scanning in the background) -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Permission for scanning Bluetooth Low Energy (BLE) devices -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    
+    <!-- Permission for connecting to Bluetooth devices -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    
+    <!-- Permission to use foreground service (required for Bluetooth operations running in the background) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- Optional: Declaring the minimum SDK version for BLE features -->
+    <uses-sdk android:minSdkVersion="21" />
+
+</manifest>

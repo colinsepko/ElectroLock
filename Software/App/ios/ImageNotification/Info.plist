@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+  <dict>
+    <!-- App general settings -->
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleDisplayName</key>
+    <string>YourAppName</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.example.yourapp</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+
+    <!-- Bluetooth Permissions for iOS -->
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>We need Bluetooth to communicate with the lock.</string> <!-- Required for iOS 13+ -->
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>We need Bluetooth to communicate with the lock.</string> <!-- Required for iOS 12 and below -->
+
+    <!-- Location Permissions for Bluetooth (needed for iOS 13 and above) -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need location access to detect nearby Bluetooth devices.</string> <!-- Required for Bluetooth scanning -->
+
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>We need location access to detect nearby Bluetooth devices even when the app is in the background.</string> <!-- Needed for background Bluetooth scanning -->
+
+    <!-- Background modes for Bluetooth scanning and peripherals -->
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>bluetooth-central</string>  <!-- For scanning and connecting to Bluetooth devices -->
+      <string>bluetooth-peripheral</string> <!-- If your app also communicates as a Bluetooth peripheral -->
+    </array>
+
+    <!-- App Transport Security (ATS) if necessary -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/> <!-- Allow arbitrary loads if you need to load non-HTTPS resources -->
+    </dict>
+
+  </dict>
+</plist>
